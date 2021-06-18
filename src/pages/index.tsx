@@ -50,13 +50,11 @@ const IndexPage = () => {
           <motion.form
             initial={{ y: 180, opacity: 0 }}
             animate={text.visible}
-            name="contact"
-            netlify-honeypot="bot-field"
-            netlify
+            name="contato"
+            method="post"
             className="w-screen max-w-xl px-4 space-y-4"
           >
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contato" />
 
             <div className="space-y-2">
               <label className="block text-lg text-gray-600">Qual o seu nome?</label>
