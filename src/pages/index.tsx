@@ -47,13 +47,20 @@ const IndexPage = () => {
         ) : null}
 
         {flip ? (
-          <motion.form initial={{ y: 180, opacity: 0 }} animate={text.visible} name="contact" netlify-honeypot="bot-field" data-netlify="true" className="w-screen max-w-xl px-4 space-y-4">
+          <motion.form
+            initial={{ y: 180, opacity: 0 }}
+            animate={text.visible}
+            name="contact"
+            netlify-honeypot="bot-field"
+            netlify
+            className="w-screen max-w-xl px-4 space-y-4"
+          >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
 
             <div className="space-y-2">
               <label className="block text-lg text-gray-600">Qual o seu nome?</label>
-              <input className="bg-white border-2 rounded-md w-full h-12 px-4 text-gray-700 focus:ring-2 focus:ring-green-300 focus:outline-none transition-all" required name="name" type="text" />
+              <input className="bg-white border-2 rounded-md w-full h-12 px-4 text-gray-700 focus:ring-2 focus:ring-green-300 focus:outline-none transition-all" required name="nome" type="text" />
             </div>
 
             <div className="space-y-2">
