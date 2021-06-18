@@ -2,10 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `tass`,
     description: `Se você tem bastantes reunião no seu dia a dia, contrate um tech lead para fazer isso pra você`,
-    // author: `@gatsbyjs`,
   },
   plugins: [
-    `@chakra-ui/gatsby-plugin`,
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

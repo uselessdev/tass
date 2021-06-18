@@ -5,29 +5,24 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 import * as React from "react"
-import { Box, Flex, Grid } from '@chakra-ui/react'
 
 const Layout = ({ children }) => {
   return (
-    <Box backgroundImage="url('./images/techlidies.svg')" backgroundSize="contain" backgroundPosition="center">
-      <Box
-        w="100vw"
-        h="100vh"
-        bgGradient={[
-          "linear(-76deg, transparent 10%, gray.50 40%)",
-          "linear(-76deg, transparent 5%, gray.50 50%)",
-          "linear(-76deg, transparent 5%, gray.50 50%)",
-          "linear(-76deg, transparent 60%, gray.50 70%)",
-        ]}
+    <div className="bg-contain bg-center lg:bg-techlidies overflow-hidden">
+      <div
+        className="w-full h-screen"
+        style={{
+          backgroundImage: `linear-gradient(90deg, white 55%, transparent 50%)`
+        }}
       >
-        <Grid w="100%" maxW="1200px" justifyContent="center" gridTemplateRows="90vh 10vh">
-          <main>{children}</main>
-          <Flex as="footer" p={4} alignItems="center">
+        <div className="grid w-full max-w-7xl mx-auto" style={{ gridTemplateRows: '90vh 10vh' }}>
+          <main className="grid place-items-center justify-start">{children}</main>
+          <footer className="flex items-center p-4 text-gray-700 text-sm font-semibold">
             © {new Date().getFullYear()}, tech lead as a service.
-          </Flex>
-        </Grid>
-      </Box>
-    </Box>
+          </footer>
+        </div>
+      </div>
+    </div>
   )
 }
 
